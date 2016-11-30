@@ -10,7 +10,7 @@ namespace WeatherForecast
         {
             var container = InitialiseDependencyInjection();
             var forecast = container.TryGetInstance<IWeatherForecast>();
-            var sevenDayForecast = forecast.GetSeventDayForecast();
+            var sevenDayForecast = forecast.GetSevenDayForecast();
             Console.WriteLine($"Average temperature for the next 7 days is {sevenDayForecast.AverageTemperature}");
         }
 

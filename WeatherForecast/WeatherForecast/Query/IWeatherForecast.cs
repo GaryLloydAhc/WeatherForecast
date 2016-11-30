@@ -4,6 +4,6 @@ namespace WeatherForecast.Query
 {
     public interface IWeatherForecast
     {
-        SevenDayForecast GetSeventDayForecast();
+        SevenDayForecast GetSevenDayForecast();
     }
 }

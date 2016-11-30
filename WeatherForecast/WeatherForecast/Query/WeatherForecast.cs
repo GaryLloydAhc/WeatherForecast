@@ -11,7 +11,7 @@ namespace WeatherForecast.Query
         {
             _sevenDayTempsQuery = sevenDayTempsQuery;
         }
-        public SevenDayForecast GetSeventDayForecast()
+        public SevenDayForecast GetSevenDayForecast()
         {
             var sevenDayTemperatures = _sevenDayTempsQuery.GetSevenDayTemperatures();
 

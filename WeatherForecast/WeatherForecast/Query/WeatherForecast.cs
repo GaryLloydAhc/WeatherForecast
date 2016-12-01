@@ -16,38 +16,17 @@ namespace WeatherForecast.Query
         public SevenDayForecast GetSevenDayForecast()
         {
             var sevenDayTemperatures = _sevenDayTempsQuery.GetSevenDayTemperatures();
+            var daylightReport = _daylightReportTempsQuery.GetDaylightReport();
+            var overallDaylightReportForecast = "Mostly " + (daylightReport.Count(e => e == "Sunny") > daylightReport.Count(e => e == "Cloudy") ? "Sunny" : "Cloudy");
 
             var sevenDayForecast = new SevenDayForecast
             {
                 Temperatures = sevenDayTemperatures,
-                AverageTemperature = sevenDayTemperatures.Sum() / 7
+                AverageTemperature = sevenDayTemperatures.Sum() / 7,
+                OverallDaylightReport = overallDaylightReportForecast
             };
 
             return sevenDayForecast;
-        }
-
-        public SevenDayForecast GetDaylightReportWeatherForecast()
-        {
-            SevenDayForecast overallDaylightReport;
-            var cloudycount = _daylightReportTempsQuery.GetDaylightReport().Count(e => e == "Cloudy");
-            var sunnycount = _daylightReportTempsQuery.GetDaylightReport().Count(e => e == "Sunny");
-            if (sunnycount > cloudycount)
-            {
-                overallDaylightReport = new SevenDayForecast
-                {
-                    OverallDaylightReport = "Mostly Sunny"
-                };
-            }
-            else
-            {
-                overallDaylightReport = new SevenDayForecast
-                {
-                    OverallDaylightReport = "Mostly Cloudy"
-                };
-            }
-
-            return overallDaylightReport;
-
         }
     }
 }

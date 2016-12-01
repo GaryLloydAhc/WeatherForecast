@@ -32,7 +32,6 @@ namespace WeatherForecast.Tests.Unit
 
             var weatherForecast = new Query.WeatherForecast(_mockSevenDayTemperatures.Object, _mockDaylightReport.Object);
             _sevenDayForecast = weatherForecast.GetSevenDayForecast();
-            _daylightReportForecast = weatherForecast.GetDaylightReportWeatherForecast();
         }
 
         [Test]
@@ -50,13 +49,13 @@ namespace WeatherForecast.Tests.Unit
         [Test]
         public void ThenTheDaylightReportRequestIsMade()
         {
-            _mockDaylightReport.Verify(x => x.GetDaylightReport(), Times.AtLeast(1));
+            _mockDaylightReport.Verify(x => x.GetDaylightReport(), Times.Once);
         }
 
         [Test]
         public void ThenTheOverallDaylightReportForecastIsCorrect()
         {
-            Assert.That(_daylightReportForecast.OverallDaylightReport, Is.EqualTo(_expectedOverallDaylightReport));
+            Assert.That(_sevenDayForecast.OverallDaylightReport, Is.EqualTo(_expectedOverallDaylightReport));
         }
     }
 }

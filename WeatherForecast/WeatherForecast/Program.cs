@@ -11,9 +11,8 @@ namespace WeatherForecast
             var container = InitialiseDependencyInjection();
             var forecast = container.TryGetInstance<IWeatherForecast>();
             var sevenDayForecast = forecast.GetSevenDayForecast();
-            var daylightReport = forecast.GetDaylightReportWeatherForecast();
             Console.WriteLine($"Average temperature for the next 7 days is {sevenDayForecast.AverageTemperature}");
-            Console.WriteLine($"Overall daylight report for the next 7 days is {daylightReport.OverallDaylightReport}");
+            Console.WriteLine($"Overall daylight report for the next 7 days is {sevenDayForecast.OverallDaylightReport}");
             Console.ReadKey();
         }
 

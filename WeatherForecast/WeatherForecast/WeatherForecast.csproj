@@ -49,6 +49,8 @@
     <Compile Include="Model\SevenDayForecast.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\DaylightReport.cs" />
+    <Compile Include="Query\IDaylightReport.cs" />
     <Compile Include="Query\ISevenDayTemperatures.cs" />
     <Compile Include="Query\IWeatherForecast.cs" />
     <Compile Include="Query\SevenDayTemperatures.cs" />

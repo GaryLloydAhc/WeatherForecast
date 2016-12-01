@@ -10,7 +10,7 @@ Given a request for a weather forecast<br />
 When I access the 7 seven forecast<br />
 Then I received a daylight report which will show cloudy/sunny conditions for the next 7 days<br />
 
-Example"Cloudy", "Sunny", "Cloudy", "Cloudy", "Sunny", "Sunny", "Sunny"<br />
+Example - "Cloudy", "Sunny", "Cloudy", "Cloudy", "Sunny", "Sunny", "Sunny"<br />
 
 Given a request for a weather forecast<br />
 When I access the 7 seven forecastThen an overall daylight report will show as follows.<br />

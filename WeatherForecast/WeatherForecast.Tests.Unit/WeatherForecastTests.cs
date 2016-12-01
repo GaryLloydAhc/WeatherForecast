@@ -11,7 +11,6 @@ namespace WeatherForecast.Tests.Unit
         private Mock<ISevenDayTemperatures> _mockSevenDayTemperatures;
         private Mock<IDaylightReport> _mockDaylightReport;
         private SevenDayForecast _sevenDayForecast;
-        private SevenDayForecast _daylightReportForecast;
         private int _expectedAvgTemperature;
         private string _expectedOverallDaylightReport;
 

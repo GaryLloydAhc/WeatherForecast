@@ -38,7 +38,7 @@ namespace WeatherForecast.Tests.Unit
         [Test]
         public void ThenTheSevenDayTemperatureRequestIsMade()
         {
-            _mockSevenDayTemperatures.Verify(x => x.GetSevenDayTemperatures(), Times.AtLeastOnce);
+            _mockSevenDayTemperatures.Verify(x => x.GetSevenDayTemperatures(), Times.Once);
         }
 
         [Test]

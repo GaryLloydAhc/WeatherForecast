@@ -23,6 +23,7 @@ namespace WeatherForecast.Query
             {
                 Temperatures = sevenDayTemperatures,
                 AverageTemperature = sevenDayTemperatures.Sum() / 7,
+                DaylightReport = daylightReport,
                 OverallDaylightReport = overallDaylightReportForecast
             };
 

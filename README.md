@@ -6,7 +6,7 @@ I want to know the daylight report for the next 7 days
 So that I can report the weather better
 
 #Scenarios
-Given a request for a weather forecast
+##Given a request for a weather forecast
 When I access the 7 seven forecast
 Then I received a daylight report which will show cloudy/sunny conditions for the next 7 days
 

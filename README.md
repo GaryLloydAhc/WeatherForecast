@@ -1,4 +1,4 @@
-# WeatherForecast - Dependency Injection Example
+# Weather Forecast - Dependency Injection Example
 #Story 103456 – Add Daylight Report To The Weather Forecast
 
 As a weather forecaster <br />

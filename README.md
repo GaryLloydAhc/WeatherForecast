@@ -1,8 +1,7 @@
 # WeatherForecast
 #Story 103456 – Add Daylight Report To The Weather Forecast
 
-As a weather forecaster
-
+As a weather forecaster <br />
 I want to know the daylight report for the next 7 days
 
 So that I can report the weather better
